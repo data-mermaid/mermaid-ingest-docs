@@ -52,3 +52,6 @@ Environments have been created for `local`, `dev` and `prod` environments.  The 
 3. In the Mutlipart tab, select file to ingest in the `file` parameter s.
 4. In the Mutlipart tab, set `true` or `false` in the `dryrun` parameter.
 5. Click `Send`
+
+
+[![HowTo](/assets/video.png)](https://www.loom.com/share/3f6e17b9a91d4e82844bbba344f7ca83)
