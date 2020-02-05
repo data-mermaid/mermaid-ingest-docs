@@ -32,9 +32,17 @@ Environments have been created for `local`, `dev` and `prod` environments.  The 
   * if set to `true`, records are validated and valid collect records are created but NOT saved to the dastabase. 
   * if set to `false`, records are validated and valid collect records are saved to the database.
   
-  
 
-## How to Ingest Records
+## What do you have to do before ingesting records?
+
+If you don't have a project to ingest your records into, go to [MERMAID Collect](https://collect.datamermaid.org/) to create a new project.  Your project must include all Sites, Mangement Regimes and Observers that are used in your CSV data.  Where
+sites and mangement regimes names match and observer emails match.  Below is an example of a CSV and site, management and observer records that have been added in the Collect application.
+
+![Setup](/assets/setup.png)
+
+
+
+## How to ingest records?
 
 1. Set environment, `Use Local`, `Use Dev`, or `Use Prod`
 
