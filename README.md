@@ -16,13 +16,13 @@ Can be downloaded from https://insomnia.rest/
 Environments have been created for `local`, `dev` and `prod` environments.  The environment details needed to autenticate and make calls to the API have already been setup.
 
 
-## Requests Available
+## Ingests Available
 
 * `Ingest Fish Belt Collect Records`
 * `Ingest Benthic PIT Collect Records`
 
 
-## Request Settings
+## Ingest Settings
 
 ### Multipart Tab
 
