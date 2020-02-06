@@ -4,22 +4,24 @@ MERMAID ingestion API Insomnia collection and workflow documentation
 
 ## API Client
 
-Insomnia is an API client used to make life easier when working with REST APIs and we'll be using this tool to help out with ingesting data into the MERMAID platform.  This repository includes an Insomina workspace import file (`mermaid_ingest_workspace.json`), which loads API calls for ingesting different Sample Unit type records from CSV files.
+Insomnia is an API client used to work with RESTful APIs, and we'll be using this tool in this repository to ingest data
+ into the MERMAID platform. This repository includes an Insomina workspace import file 
+ (`mermaid_ingest_workspace.json`), which handles authentication and loads API calls for ingesting different Sample Unit
+  type records from CSV files.
 
 Insominia can be downloaded from https://insomnia.rest/
 
 
 ## Environments
 
-### Sub Environments
+Environments have been created within the Insomnia workspace for
 
-Environments have been created for
-
-`local`: [http://localhost:8888](http://localhost:8888): Used for software development testing
-`dev`: [https://dev.collect.datamermaid.org](https://dev.collect.datamermaid.org): Used for Quality Assurance testing of new features, bug fixes, etc.
+`local`: [http://localhost:8888](http://localhost:8888): Used for software development testing  
+`dev`: [https://dev.collect.datamermaid.org](https://dev.collect.datamermaid.org): Used for Quality Assurance testing
+ of new features, bug fixes, etc.  
 `prod`: [https://collect.datamermaid.org](https://collect.datamermaid.org): Live application that everyone uses.
 
-Also, the details needed to authenticate and make calls to the MERMAID API have been setup.
+Also, the details needed to authenticate and make calls to the MERMAID API have been set up.
 
 
 ## Ingests Available
@@ -41,18 +43,22 @@ Also, the details needed to authenticate and make calls to the MERMAID API have 
 
 ## What do you have to do before ingesting records?
 
-If you don't have a project to ingest your records into, go to [MERMAID Collect](https://collect.datamermaid.org/) to create a new project.  Your project must include all Sites, Mangement Regimes and Observers that are used in your CSV data.  Where
-sites and mangement regimes' names match the names used in the CSV file and the emails of the observers match the observer emails used in the CSV file.  Below is an illustration of a CSV file and site, management regimes and observer records that have been added to a project using the Collect application.
+If you don't have a project to ingest your records into, go to [MERMAID Collect](https://collect.datamermaid.org
+/) (or [MERMAID Collect dev](https://dev-collect.datamermaid.org/) for dev, etc.) to create a new project. Your project
+ must include all Sites, Mangement Regimes and Observers that are used in your CSV data. Sites and mangement regimes'
+ names match the names used in the CSV file, and the emails of the observers match the observer emails used in the
+  CSV file. Below is an illustration of a CSV file and site, management regimes and observer records that have been
+  added to a project using the Collect application.
 
 ![Setup](/assets/setup.png)
 
 
-
 ## How to ingest records?
 
-1. Set environment, `Use Local`, `Use Dev`, or `Use Prod`
+1. Set environment: `Use Local`, `Use Dev`, or `Use Prod`
 
-2. Change `<PROJECT>` placeholder that can be found in the URL section of Insomina, to the project id in that you will be ingesting records into. 
+2. Change `<PROJECT>` placeholder that can be found in the URL section of Insomina to the id of the project that you
+ will be ingesting records into. 
 
 Example:  
   
@@ -74,14 +80,19 @@ Example:
 
 6.
 
-If ingest was **successful** ([200 OK](#valid-ingest)), your records will be available to view in the [Collect application](https://collect.datamermaid.org/).
+If ingest was **successful** ([200 OK](#valid-ingest)), you will see JSON-formatted results in the righthand
+ Insomnia pane, and your records will be available to view in the [Collect
+ application](https://collect.datamermaid.org/).
 
 #### Valid Ingest
 
 ![Valid](/assets/valid.png)
 
 
-If ingest was **unsuccessful** ([400 Bad Request](#invalid-ingest)), you will recieve a response in Insominia listing out validation errors and where to find them in the CSV file.  [Interpreting unsuccessful ingest](#interpreting-unsuccessful-ingest) has more details on where to find your invalid records.
+If ingest was **unsuccessful** ([400 Bad Request](#invalid-ingest)), you will recieve a response in the righthand
+ Insomnia pane listing out validation errors and where to find them in the CSV file. 
+ [Interpreting unsuccessful ingest](#interpreting-unsuccessful-ingest) has more details on where to find your invalid
+  records.
 
 #### Invalid Ingest
 
@@ -90,7 +101,8 @@ If ingest was **unsuccessful** ([400 Bad Request](#invalid-ingest)), you will re
 
 **Other ingest failure types**
 
-* `500 Internal Server Error`: There can be many reasons why you get this error but one notable one is using a CSV file that does not follow the correct column naming (see [Ingest template files](#ingest-template-files)).
+* `500 Internal Server Error`: There can be many reasons why you get this error but one notable one is using a CSV
+ file that does not follow the correct column naming (see [Ingest template files](#ingest-template-files)).
 
 
 **Ingested records can now be validated and submitted in the [Collect application](https://collect.datamermaid.org/).**
@@ -98,13 +110,11 @@ If ingest was **unsuccessful** ([400 Bad Request](#invalid-ingest)), you will re
 
 7. Navigate to [Collect application](https://collect.datamermaid.org/#/projects)
 8. Click on the project with the new ingested records.
-9. New records are now available to go through the Validate and Submit workflow.  Details can be found [here](https://datamermaid.org/docs/documentation/mermaid-workflow/validate-and-submit-data/)
+9. New records are now available to go through the Validate and Submit workflow. 
+Details can be found [here](https://datamermaid.org/docs/documentation/mermaid-workflow/validate-and-submit-data/)
 
 
-
-
-## Interpreting unsuccessful ingest
-
+## Interpreting ingestion errors
 
 ```
 [
@@ -129,7 +139,8 @@ If ingest was **unsuccessful** ([400 Bad Request](#invalid-ingest)), you will re
 
 ## Ingest template files
 
-Ingest files follow a strict column naming schema.  To make life a bit easier, you can find templates for the supported ingest Sample Unit Types.
+Ingest files follow a strict column naming schema. To make life a bit easier, you can find templates for the
+ supported ingest Sample Unit Types in this respository.
 
 * Fish Belt: [fishbelt_template.csv](/schemas/fishbelt_template.csv)
 * Benthic PIT: [benthic_pit_template.csv](/schemas/benthic_pit_template.csv)
