@@ -75,7 +75,7 @@ Example:
 5. Click `Send`
 
 
-[![HowTo](/assets/video.png)](https://www.loom.com/share/3f6e17b9a91d4e82844bbba344f7ca83)
+[![HowTo](/assets/video.png)](https://www.loom.com/share/5e16903be1d346faa12d1ff3692e9917)
 
 
 6.
