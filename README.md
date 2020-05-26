@@ -28,6 +28,7 @@ Also, the details needed to authenticate and make calls to the MERMAID API have 
 
 * `Ingest Fish Belt Collect Records`
 * `Ingest Benthic PIT Collect Records`
+* `Ingest Bleaching Records`
 
 
 ## Ingest Settings
@@ -35,7 +36,7 @@ Also, the details needed to authenticate and make calls to the MERMAID API have 
 ### Multipart Tab
 
 * `file`: Select file to upload
-* `protocol`: Depending on the `Request`, this value has been preset to `benthicpit` or `fishbelt`
+* `protocol`: Depending on the `Request`, this value has been preset to `bleachingqc`, `benthicpit` or `fishbelt`
 * `dryrun`:
   * if set to `true`, records are validated and valid collect records are created but NOT saved to the dastabase. 
   * if set to `false`, records are validated and valid collect records are saved to the database.
@@ -144,5 +145,6 @@ Ingest files follow a strict column naming schema. To make life a bit easier, yo
 
 * Fish Belt: [fishbelt_template.csv](/schemas/fishbelt_template.csv)
 * Benthic PIT: [benthic_pit_template.csv](/schemas/benthic_pit_template.csv)
+* Bleaching PIT: [bleaching_template.csv](/schemas/bleaching_template.csv)
 
 **NOTE: In each template, column names that end with `*` are required.**
