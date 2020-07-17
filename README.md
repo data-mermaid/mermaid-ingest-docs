@@ -148,3 +148,8 @@ Ingest files follow a strict column naming schema. To make life a bit easier, yo
 * Bleaching PIT: [bleaching_template.csv](/schemas/bleaching_template.csv)
 
 **NOTE: In each template, column names that end with `*` are required.**
+
+
+## Fish Belt Ingest
+
+**NOTE: A recent change to Width to support width ranges, ensure you are using the correct CSV is using the correct names**
