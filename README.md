@@ -27,8 +27,10 @@ Also, the details needed to authenticate and make calls to the MERMAID API have 
 ## Ingests Available
 
 * `Ingest Fish Belt Collect Records`
+* `Ingest Benthic LIT Collect Records`
 * `Ingest Benthic PIT Collect Records`
 * `Ingest Bleaching Records`
+* `Ingest Habitat Complexity Records`
 
 
 ## Ingest Settings
@@ -36,7 +38,7 @@ Also, the details needed to authenticate and make calls to the MERMAID API have 
 ### Multipart Tab
 
 * `file`: Select file to upload
-* `protocol`: Depending on the `Request`, this value has been preset to `bleachingqc`, `benthicpit` or `fishbelt`
+* `protocol`: Depending on the `Request`, this value has been preset to `bleachingqc`, `benthiclit`, `benthicpit`, `fishbelt` or `habitatcomplexity`
 * `dryrun`:
   * if set to `true`, records are validated and valid collect records are created but NOT saved to the dastabase. 
   * if set to `false`, records are validated and valid collect records are saved to the database.
