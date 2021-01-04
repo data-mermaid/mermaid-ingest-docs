@@ -145,7 +145,7 @@ Details can be found [here](https://datamermaid.org/docs/documentation/mermaid-w
 Ingest files follow a strict column naming schema. To make life a bit easier, you can find templates for the
  supported ingest Sample Unit Types in this respository.
 
-* Benthic LIT: [benthic_pit_template.csv](/schemas/benthic_lit_template.csv)
+* Benthic LIT: [benthic_lit_template.csv](/schemas/benthic_lit_template.csv)
 * Benthic PIT: [benthic_pit_template.csv](/schemas/benthic_pit_template.csv)
 * Bleaching: [bleaching_template.csv](/schemas/bleaching_template.csv)
 * Fish Belt: [fishbelt_template.csv](/schemas/fishbelt_template.csv)
