@@ -1,3 +1,7 @@
+# ARCHIVED - DO NOT USE SCHEMA
+Schema are now dynamically available using urls liks `/v1/projects/<project_id>/collectrecords/ingest_schema/<sample_unit>/csv/`. For more information, see 
+https://datamermaid.org/documentation
+
 # mermaid-ingest-docs
 
 MERMAID ingestion API Insomnia collection and workflow documentation
